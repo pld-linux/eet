@@ -1,4 +1,5 @@
 Summary:	Library for speedy data storage, retrieval, and compression
+Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
 Version:	0.9.9
 %define	_snap	20050105
@@ -29,21 +30,43 @@ other machines, or just writing to arbitary files on the system. All
 data is encoded in a platform independant way and can be written and
 read by any architecture.
 
+%description -l pl
+Eet to ma³a biblioteka zaprojektowana do zapisu dowolnego zbioru
+porcji danych do pliku i opcjonalnej kompresji ka¿dej porcji (podobnie
+do pliku zip) oraz umo¿liwienia pó¼niej szybkiego odczytu pliku ze
+swobodnym dostêpem. Nie jest to zip, jako ¿e sam zip jest bardziej
+z³o¿ony ni¿ trzeba, a by³o du¿o pro¶ciej zaimplementowaæ to tak, jak
+jest.
+
+Biblioteka mo¿e tak¿e kodowaæ i dekodowaæ struktury danych w pamiêci,
+a tak¿e dane obrazów do zapisu do plików eet lub wysy³ania po sieci na
+inne maszyny, lub po prostu zapisywania do dowolnych plików w
+systemie. Wszystkie dane s± kodowane w sposób niezale¿ny od platformy
+i mog± byæ zapisywane i odczytywane na dowolnej architekturze.
+
 %package devel
-Summary:	headers, documentation and test programs
+Summary:	Header files for Eet library
+Summary(pl):	Pliki nag³ówkowe biblioteki Eet
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
-Headers, static libraries, test programs and documentation for Eet.
+Header files for Eet library.
+
+%description devel -l pl
+Pliki nag³ówkowe biblioteki Eet.
 
 %package static
-Summary:	Static libraries
+Summary:	Static Eet library
+Summary(pl):	Statyczna biblioteka Eet
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
-Static libraries fo Eet.
+Static Eet library.
+
+%description static -l pl
+Statyczna biblioteka Eet.
 
 %prep
 %setup -q -n %{name}
@@ -59,6 +82,7 @@ Static libraries fo Eet.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -71,8 +95,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING README
-%attr(755,root,root) %{_libdir}/libeet.so.*
 %attr(755,root,root) %{_bindir}/eet
+%attr(755,root,root) %{_libdir}/libeet.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
