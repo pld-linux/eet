@@ -1,14 +1,14 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	0.9.9
-%define	_snap	20050105
+Version:	0.9.10
+%define	_snap	20050329
 Release:	0.%{_snap}.0.1
 License:	BSD
 Group:		Libraries
 #Source0:	http://dl.sourceforge.net/enlightenment/%{name}-%{version}.tar.gz
-Source0:	ftp://ftp.sparky.homelinux.org/pub/e17/%{name}-%{version}-%{_snap}.tar.gz
-# Source0-md5:	77334dc6def3684e6ac51cec6189770a
+Source0:	ftp://ftp.sparky.homelinux.org/pub/e17/%{name}-%{_snap}.tar.gz
+# Source0-md5:	d993ba9af4fa5e54f802d4b013a24743
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
