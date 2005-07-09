@@ -1,14 +1,14 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	0.9.10
-%define	_snap	20050329
-Release:	0.%{_snap}.0.1
+Version:	0.9.10.010
+%define	_snap	20050701
+Release:	0.%{_snap}.0.9
 License:	BSD
 Group:		Libraries
 #Source0:	http://dl.sourceforge.net/enlightenment/%{name}-%{version}.tar.gz
-Source0:	ftp://ftp.sparky.homelinux.org/pub/e17/%{name}-%{_snap}.tar.gz
-# Source0-md5:	d993ba9af4fa5e54f802d4b013a24743
+Source0:	ftp://ftp.sparky.homelinux.org/snaps/enli/e17/libs/%{name}-%{_snap}.tar.gz
+# Source0-md5:	82a7680c4eedf3c4a073fcdf7134cc91
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -73,7 +73,7 @@ Statyczna biblioteka Eet.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -94,8 +94,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING README
+%doc AUTHORS COPYING COPYING-PLAIN INSTALL README
 %attr(755,root,root) %{_bindir}/eet
+%attr(755,root,root) %{_bindir}/eet_bench
 %attr(755,root,root) %{_libdir}/libeet.so.*.*.*
 
 %files devel
