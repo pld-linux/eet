@@ -1,13 +1,11 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	0.9.10.010
-%define	_snap	20050701
-Release:	0.%{_snap}.0.9
+Version:	0.9.10.013
+Release:	1
 License:	BSD
 Group:		Libraries
-#Source0:	http://dl.sourceforge.net/enlightenment/%{name}-%{version}.tar.gz
-Source0:	http://sparky.homelinux.org/snaps/enli/e17/libs/%{name}-%{_snap}.tar.gz
+Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz 
 # Source0-md5:	82a7680c4eedf3c4a073fcdf7134cc91
 URL:		http://enlightenment.org/
 BuildRequires:	autoconf
@@ -49,6 +47,8 @@ Summary:	Header files for Eet library
 Summary(pl):	Pliki nag³ówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libjpeg-devel
+Requires:	zlib-devel
 
 %description devel
 Header files for Eet library.
@@ -69,11 +69,11 @@ Static Eet library.
 Statyczna biblioteka Eet.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
