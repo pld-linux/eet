@@ -19,6 +19,8 @@ BuildRequires:	libtool
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%undefine	__cxx
+
 %description
 Eet is a tiny library designed to write an arbitary set of chunks of
 data to a file and optionally compress each chunk (very much like a
@@ -76,11 +78,11 @@ Statyczna biblioteka Eet.
 %setup -q
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
+#%%{__libtoolize}
+#%%{__aclocal}
+#%%{__autoconf}
+#%%{__autoheader}
+#%%{__automake}
 %configure \
 	%{!?with_static_libs:--disable-static}
 %{__make}
