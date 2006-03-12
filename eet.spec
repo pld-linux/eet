@@ -5,12 +5,12 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	0.9.10.023
+Version:	0.9.10.024
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz 
-# Source0-md5:	d1862511bc2798747b85a2386fb2105a
+# Source0-md5:	b7bb67d585f2cc0b975e47f96084d782
 URL:		http://enlightenment.org/Libraries/Eet/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -78,11 +78,6 @@ Statyczna biblioteka Eet.
 %setup -q
 
 %build
-#%%{__libtoolize}
-#%%{__aclocal}
-#%%{__autoconf}
-#%%{__autoheader}
-#%%{__automake}
 %configure \
 	%{!?with_static_libs:--disable-static}
 %{__make}
