@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for speedy data storage, retrieval, and compression
-Summary(pl.UTF-8):   Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
+Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
 Version:	0.9.10.036
 Release:	2
@@ -50,7 +50,7 @@ i mogą być zapisywane i odczytywane na dowolnej architekturze.
 
 %package devel
 Summary:	Header files for Eet library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki Eet
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
@@ -64,7 +64,7 @@ Pliki nagłówkowe biblioteki Eet.
 
 %package static
 Summary:	Static Eet library
-Summary(pl.UTF-8):   Statyczna biblioteka Eet
+Summary(pl.UTF-8):	Statyczna biblioteka Eet
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
