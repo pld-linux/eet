@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	Library for speedy data storage, retrieval, and compression
-Summary(pl):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
+Summary(pl.UTF-8):   Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
 Version:	0.9.10.036
 Release:	2
@@ -34,23 +34,23 @@ other machines, or just writing to arbitary files on the system. All
 data is encoded in a platform independant way and can be written and
 read by any architecture.
 
-%description -l pl
-Eet to ma≥a biblioteka zaprojektowana do zapisu dowolnego zbioru
-porcji danych do pliku i opcjonalnej kompresji kaødej porcji (podobnie
-do pliku zip) oraz umoøliwienia pÛºniej szybkiego odczytu pliku ze
-swobodnym dostÍpem. Nie jest to zip, jako øe sam zip jest bardziej
-z≥oøony niø trzeba, a by≥o duøo pro∂ciej zaimplementowaÊ to tak, jak
+%description -l pl.UTF-8
+Eet to ma≈Ça biblioteka zaprojektowana do zapisu dowolnego zbioru
+porcji danych do pliku i opcjonalnej kompresji ka≈ºdej porcji (podobnie
+do pliku zip) oraz umo≈ºliwienia p√≥≈∫niej szybkiego odczytu pliku ze
+swobodnym dostƒôpem. Nie jest to zip, jako ≈ºe sam zip jest bardziej
+z≈Ço≈ºony ni≈º trzeba, a by≈Ço du≈ºo pro≈õciej zaimplementowaƒá to tak, jak
 jest.
 
-Biblioteka moøe takøe kodowaÊ i dekodowaÊ struktury danych w pamiÍci,
-a takøe dane obrazÛw do zapisu do plikÛw eet lub wysy≥ania po sieci na
-inne maszyny, lub po prostu zapisywania do dowolnych plikÛw w
-systemie. Wszystkie dane s± kodowane w sposÛb niezaleøny od platformy
-i mog± byÊ zapisywane i odczytywane na dowolnej architekturze.
+Biblioteka mo≈ºe tak≈ºe kodowaƒá i dekodowaƒá struktury danych w pamiƒôci,
+a tak≈ºe dane obraz√≥w do zapisu do plik√≥w eet lub wysy≈Çania po sieci na
+inne maszyny, lub po prostu zapisywania do dowolnych plik√≥w w
+systemie. Wszystkie dane sƒÖ kodowane w spos√≥b niezale≈ºny od platformy
+i mogƒÖ byƒá zapisywane i odczytywane na dowolnej architekturze.
 
 %package devel
 Summary:	Header files for Eet library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki Eet
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libjpeg-devel
@@ -59,19 +59,19 @@ Requires:	zlib-devel
 %description devel
 Header files for Eet library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki Eet.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki Eet.
 
 %package static
 Summary:	Static Eet library
-Summary(pl):	Statyczna biblioteka Eet
+Summary(pl.UTF-8):   Statyczna biblioteka Eet
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Eet library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka Eet.
 
 %prep
