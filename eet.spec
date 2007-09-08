@@ -5,15 +5,15 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	0.9.10.036
-Release:	2
+Version:	0.9.10.038
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz 
-# Source0-md5:	78baeaec84bd0b773bb8d6c68fdc9053
+# Source0-md5:	d913862ac467bfeb3a0b92f41d857dfd
 URL:		http://enlightenment.org/Libraries/Eet/
 BuildRequires:	autoconf
-BuildRequires:	automake
+BuildRequires:	automake >= 1.4
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtool
 BuildRequires:	zlib-devel
@@ -101,16 +101,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING COPYING-PLAIN INSTALL README
+%doc AUTHORS COPYING COPYING-PLAIN README
 %attr(755,root,root) %{_libdir}/libeet.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/eet-config
 %attr(755,root,root) %{_libdir}/libeet.so
 %{_libdir}/libeet.la
 %{_pkgconfigdir}/eet.pc
-%{_includedir}/Eet*
+%{_includedir}/Eet.h
 
 %if %{with static_libs}
 %files static
