@@ -11,7 +11,7 @@ License:	BSD
 Group:		Libraries
 Source0:	http://enlightenment.freedesktop.org/files/%{name}-%{version}.tar.gz 
 # Source0-md5:	d913862ac467bfeb3a0b92f41d857dfd
-URL:		http://enlightenment.org/Libraries/Eet/
+URL:		http://enlightenment.org/p.php?p=about/libs/eet
 BuildRequires:	autoconf
 BuildRequires:	automake >= 1.4
 BuildRequires:	libjpeg-devel
