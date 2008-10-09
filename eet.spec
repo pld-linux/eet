@@ -2,17 +2,16 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
-%define		_snap	20080813
 
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	1.0.2
-Release:	0.%{_snap}.1
+Version:	1.1.0
+Release:	0.1
 License:	BSD
 Group:		Libraries
-Source0:	%{name}-%{version}-%{_snap}.tar.bz2 
-# Source0-md5:	23057f3f9062a079fc4c905fc4ebe971
+Source0:	http://download.enlightenment.org/snapshots/2008-09-25/%{name}-%{version}.tar.bz2 
+# Source0-md5:	c9f1fd90c3f9886cebd5d38ff9cd0ccf
 URL:		http://enlightenment.org/p.php?p=about/efl/eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -77,7 +76,7 @@ Static Eet library.
 Statyczna biblioteka Eet.
 
 %prep
-%setup -q -n %{name}-%{version}-%{_snap}
+%setup -q -n %{name}-%{version}
 
 %build
 %{__libtoolize}
