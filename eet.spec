@@ -76,7 +76,7 @@ Static Eet library.
 Statyczna biblioteka Eet.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %{__libtoolize}
