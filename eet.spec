@@ -2,15 +2,14 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
-
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
 Version:	1.1.0
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries
-Source0:	http://download.enlightenment.org/snapshots/2008-09-25/%{name}-%{version}.tar.bz2 
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2 
 # Source0-md5:	c9f1fd90c3f9886cebd5d38ff9cd0ccf
 URL:		http://enlightenment.org/p.php?p=about/efl/eet
 BuildRequires:	autoconf >= 2.52
