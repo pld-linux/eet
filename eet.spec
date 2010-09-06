@@ -14,16 +14,16 @@ Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
 URL:		http://enlightenment.org/p.php?p=about/efl/eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	eina-devel
-BuildRequires:	gnutls-devel
+BuildRequires:	eina-devel >= 1.0.0
+BuildRequires:	gnutls-devel >= 1.7.6
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtool
-BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig >= 1:0.22
+BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
+Requires:	gnutls >= 1.7.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%undefine	__cxx
 
 %description
 Eet is a tiny library designed to write an arbitary set of chunks of
@@ -57,6 +57,9 @@ Summary:	Header files for Eet library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	eina-devel >= 1.0.0
+Requires:	gnutls-devel >= 1.7.6
+Requires:	libgcrypt-devel
 Requires:	libjpeg-devel
 Requires:	zlib-devel
 
@@ -81,16 +84,18 @@ Statyczna biblioteka Eet.
 %prep
 %setup -q
 
+%{__sed} -i -e 's/eina-0/eina/' configure.ac
+
 %build
-rm -f ltmain.sh
 %{__libtoolize}
 %{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	%{!?with_static_libs:--disable-static}
-%{__make} V=1
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
