@@ -5,12 +5,13 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	1.3.2
-Release:	1
+%define	subver	beta2
+Version:	1.4.0
+Release:	0.%{subver}.1
 License:	BSD
 Group:		Libraries
-Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	8e3ad419baaab4a9046f64d357583705
+Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.%{subver}.tar.bz2
+# Source0-md5:	ebf2a65bd46df797e8dd0256913d22b7
 URL:		http://enlightenment.org/p.php?p=about/efl/eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -82,7 +83,7 @@ Static Eet library.
 Statyczna biblioteka Eet.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}.%{subver}
 
 %{__sed} -i -e 's/eina-0/eina/' configure.ac
 
@@ -111,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING COPYING-PLAIN README
+%doc AUTHORS COPYING NEWS README 
 %attr(755,root,root) %{_bindir}/eet
 %attr(755,root,root) %{_libdir}/libeet.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libeet.so.1
@@ -121,7 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libeet.so
 %{_libdir}/libeet.la
 %{_pkgconfigdir}/eet.pc
-%{_includedir}/Eet.h
+%{_includedir}/eet-1/Eet.h
 
 %if %{with static_libs}
 %files static
