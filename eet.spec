@@ -4,8 +4,8 @@
 #
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
-Name:		eet
 %define	subver	beta2
+Name:		eet
 Version:	1.4.0
 Release:	0.%{subver}.1
 License:	BSD
@@ -112,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING NEWS README 
+%doc AUTHORS COPYING NEWS README
 %attr(755,root,root) %{_bindir}/eet
 %attr(755,root,root) %{_libdir}/libeet.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libeet.so.1
@@ -122,6 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libeet.so
 %{_libdir}/libeet.la
 %{_pkgconfigdir}/eet.pc
+%dir %{_includedir}/eet-1
 %{_includedir}/eet-1/Eet.h
 
 %if %{with static_libs}
