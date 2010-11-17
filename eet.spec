@@ -85,8 +85,6 @@ Statyczna biblioteka Eet.
 %prep
 %setup -q -n %{name}-%{version}.%{subver}
 
-%{__sed} -i -e 's/eina-0/eina/' configure.ac
-
 %build
 %{__libtoolize}
 %{__aclocal} -I m4
@@ -121,9 +119,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libeet.so
 %{_libdir}/libeet.la
+%{_includedir}/eet-1
 %{_pkgconfigdir}/eet.pc
-%dir %{_includedir}/eet-1
-%{_includedir}/eet-1/Eet.h
 
 %if %{with static_libs}
 %files static
