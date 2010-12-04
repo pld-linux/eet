@@ -4,14 +4,14 @@
 #
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
-%define	subver	beta2
+%define	subver	beta3
 Name:		eet
 Version:	1.4.0
 Release:	0.%{subver}.1
 License:	BSD
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.%{subver}.tar.bz2
-# Source0-md5:	ebf2a65bd46df797e8dd0256913d22b7
+# Source0-md5:	40545e9b88048c68ea5eeaed0771703d
 URL:		http://enlightenment.org/p.php?p=about/efl/eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
