@@ -11,7 +11,7 @@ License:	BSD
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
 # Source0-md5:	950fa1326540dad2f9808d8ee8e8c3d2
-URL:		http://enlightenment.org/p.php?p=about/efl/eet
+URL:		http://trac.enlightenment.org/e/wiki/Eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
 BuildRequires:	eina-devel >= 1.0.0
