@@ -5,16 +5,16 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	1.4.1
-Release:	2
+Version:	1.5.0
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	5c1859df4e58e90389b087667ce09c5b
+# Source0-md5:	8d13801e90e817d9f6d047ed8d027d60
 URL:		http://trac.enlightenment.org/e/wiki/Eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	eina-devel >= 1.0.1
+BuildRequires:	eina-devel >= 1.1.0
 BuildRequires:	gnutls-devel >= 1.7.6
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libjpeg-devel
@@ -22,7 +22,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
-Requires:	eina >= 1.0.1
+Requires:	eina >= 1.1.0
 Requires:	gnutls >= 1.7.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -58,7 +58,7 @@ Summary:	Header files for Eet library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	eina-devel >= 1.0.1
+Requires:	eina-devel >= 1.1.0
 Requires:	gnutls-devel >= 1.7.6
 Requires:	libgcrypt-devel
 Requires:	libjpeg-devel
@@ -102,6 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_examplesdir}
+mv -f $RPM_BUILD_ROOT%{_datadir}/eet/examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -121,6 +124,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libeet.la
 %{_includedir}/eet-1
 %{_pkgconfigdir}/eet.pc
+%{_examplesdir}/%{name}-%{version}
 
 %if %{with static_libs}
 %files static
