@@ -5,25 +5,25 @@
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
-Version:	1.7.7
+Version:	1.7.9
 Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
-# Source0-md5:	0ee92caea3fab819da21e2f1abe1bfa9
+# Source0-md5:	cb2ba528bda53014439481d51c7c4427
 URL:		http://trac.enlightenment.org/e/wiki/Eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	eina-devel >= 1.2.0
-BuildRequires:	gnutls-devel >= 1.7.7
+BuildRequires:	eina-devel >= 1.7.9
+BuildRequires:	gnutls-devel >= 1.7.6
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
-Requires:	eina >= 1.2.0
-Requires:	gnutls >= 1.7.7
+Requires:	eina >= 1.7.9
+Requires:	gnutls >= 1.7.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -58,8 +58,8 @@ Summary:	Header files for Eet library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	eina-devel >= 1.2.0
-Requires:	gnutls-devel >= 1.7.7
+Requires:	eina-devel >= 1.7.9
+Requires:	gnutls-devel >= 1.7.6
 Requires:	libgcrypt-devel
 Requires:	libjpeg-devel
 Requires:	zlib-devel
