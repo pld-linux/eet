@@ -3,6 +3,7 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 #
+%define	eina_ver	1.7.10
 Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
@@ -15,7 +16,7 @@ Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
 URL:		http://trac.enlightenment.org/e/wiki/Eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
-BuildRequires:	eina-devel >= 1.7.9
+BuildRequires:	eina-devel >= %{eina_ver}
 BuildRequires:	gnutls-devel >= 1.7.6
 BuildRequires:	libgcrypt-devel
 BuildRequires:	libjpeg-devel
@@ -23,7 +24,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	sed >= 4.0
 BuildRequires:	zlib-devel
-Requires:	eina >= 1.7.9
+Requires:	eina >= %{eina_ver}
 Requires:	gnutls >= 1.7.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -59,7 +60,7 @@ Summary:	Header files for Eet library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Eet
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	eina-devel >= 1.7.9
+Requires:	eina-devel >= %{eina_ver}
 Requires:	gnutls-devel >= 1.7.6
 Requires:	libgcrypt-devel
 Requires:	libjpeg-devel
