@@ -8,11 +8,12 @@ Summary:	Library for speedy data storage, retrieval, and compression
 Summary(pl.UTF-8):	Biblioteka do szybkiego zapisywania, odtwarzania i kompresji danych
 Name:		eet
 Version:	1.7.10
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries
-Source0:	http://download.enlightenment.org/releases/%{name}-%{version}.tar.bz2
+Source0:	http://download.enlightenment.org/att/releases/%{name}-%{version}.tar.bz2
 # Source0-md5:	396ccb7094518cb9ce6939e7d2c6ef8c
+Patch0:		gnutls.patch
 URL:		http://trac.enlightenment.org/e/wiki/Eet
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake >= 1.6
@@ -86,6 +87,7 @@ Statyczna biblioteka Eet.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
